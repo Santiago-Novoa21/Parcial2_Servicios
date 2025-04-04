@@ -9,6 +9,7 @@
 
 namespace Parcial2_apps.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -23,6 +24,8 @@ namespace Parcial2_apps.Models
         public string Placa { get; set; }
         public string Marca { get; set; }
         public int NumeroEjes { get; set; }
+
+        [JsonIgnore]
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pesaje> Pesajes { get; set; }
